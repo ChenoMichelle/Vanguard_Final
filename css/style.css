@@ -1,0 +1,414 @@
+:root{
+
+    --primary: #081833;
+    --secondary: #F4C95D;
+    --third: #D64045;
+    --fourth: #FEFCFD;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: white;
+    padding: 8px 15px;
+    z-index: 100;
+    text-decoration: none;
+    font-weight: bold;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+
+nav{
+    background: var(--primary);
+}
+
+.logo{
+    
+    font-size: 35px;
+    width: 200;
+    height: auto;
+    padding: 0 100px;
+    
+}
+
+nav ul {
+    text-align: center; 
+    padding: 0; 
+    margin: 0; 
+}
+
+nav ul li {
+    display: inline-block; 
+    line-height: 80px;
+    margin: 0 5px; 
+}
+
+nav ul li a:hover {
+    background-image: url('../assets/fight.png'); 
+    color: white; 
+}
+body, p, a, ul, li{
+
+    margin: 0;
+    padding:0;
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+/* base style */
+body{
+
+    background: var(--primary);
+    overflow-x: hidden;
+    font-family:'Oswald'
+}
+
+.button{
+
+    background: none;
+    border: 2px solid var(--secondary);
+    color: var(--secondary);
+    padding: 6px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0,6);
+    display: inline-block;
+
+
+
+}
+
+.button:hover{
+
+    color: #222;
+    background: var(--third);
+
+}
+
+/*font*/
+@font-face{
+
+    font-family: 'Oswald';
+    src: url('../assets/fonts/Oswald-Regular.ttf');
+}
+
+h1, h2, h3{
+
+    color: #DDDBFF;
+    font-weight: normal;
+}
+.about-container {
+    display: flex;
+   gap: 500px;
+  }
+  
+  .about-title {
+    position: relative; 
+    text-align: center;
+  }
+  
+  .spin {
+    width: 5000px; 
+    height: auto; 
+    animation: spin 2s linear infinite;
+
+  }
+
+  /* Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+    .spin {
+        animation: none;
+    }
+}
+  
+  .about-h2 {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: white; 
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .meet-container {
+    display: flex;
+   gap: 500px;
+  }
+  
+  .meet-title {
+    position: relative; 
+    text-align: center; 
+  }
+  
+
+  .meet-h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    color: var(--fourth) 
+   
+  }
+
+  .news-title {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: var(--fourth); 
+  }
+
+
+
+
+p,a,li{
+
+    color: #9893D8;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px; 
+  }
+  
+  .text-over-image {
+    position: relative;
+  }
+  
+
+.og-cast {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; 
+  }
+  
+  .character-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .character-profile h3, .character-profile img, .para p {
+    margin: 10px 0;
+  }
+
+  .character-container {
+    position: relative;
+   
+}
+
+
+
+
+  .img-container {
+    position: relative;
+    float: left;
+}
+
+.img-container .hovImg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+
+.img-container:hover .hovImg {
+    opacity: 1; 
+}
+
+.img-container .mainImg {
+    transition: opacity 0.3s ease; 
+}
+
+.img-container:hover .mainImg {
+    opacity: 0; 
+}
+
+
+img {
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.twitter-timeline{
+
+    height: 400px; 
+    width: 80%; 
+    overflow-y: auto; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    margin: 20px auto;
+}
+
+.howtoclass{
+
+    
+        text-align: center;
+        font-size: 2em; 
+        color: var(--third); 
+        margin-top: 30px; 
+        margin-bottom: 20px; 
+        font-family: 'Oswald'; 
+
+
+}
+
+.extra-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f5f5f5; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin: 20px;
+}
+
+.box-1, .box-2 {
+    flex-basis: 50%;
+}
+
+.box-1 img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.box-2 {
+    padding: 10px;
+}
+
+.box-2 .Michelle {
+    color: #333; 
+    font-size: 1em; 
+    line-height: 1.6; 
+    font-family: 'Arial', sans-serif; 
+    text-align: justify; 
+}
+
+
+.iframe-container {
+
+    border: 3px solid #4CAF50; 
+    border-radius: 10px; 
+    
+    width: 80%; 
+    height: 600px; 
+    margin: 20px auto; 
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+iframe {
+    width: 100%; 
+    height: 100%; 
+    border: none; 
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    /* Tablet Screen */
+    
+  
+    .logo {
+        font-size: 25px;
+        width: auto;
+        padding: 0 20px;
+    }
+
+    nav ul li {
+        margin: 0 3px;
+        line-height: 60px;
+    }
+
+    
+    .about-container, .meet-container, .extra-container, .about-grid, .og-cast {
+        flex-direction: column;
+        gap: 20px;
+        grid-template-columns: 1fr;
+    }
+
+    
+    h1, h2, h3 {
+        font-size: smaller;
+    }
+
+    p, a, li {
+        font-size: smaller;
+    }
+
+    .img-container .mainImg, .img-container .hovImg {
+        max-width: 100%;
+    }
+
+
+    .button {
+        padding: 4px 10px;
+        font-size: smaller;
+    }
+
+    
+    .iframe-container {
+        height: auto;
+        width: 100%;
+    }
+
+   
+}
+
+@media screen and (max-width: 480px) {
+    /* Mobile Screen */
+  
+    .logo {
+        font-size: 20px;
+        padding: 0 10px;
+    }
+
+    nav ul li {
+        margin: 0 2px;
+    }
+
+  
+    h1, h2, h3, p, a, li {
+        font-size: even smaller;
+    }
+
+  
+    .button {
+        padding: 3px 8px;
+        font-size: even smaller;
+    }
+
+    
+}
+
+
+/*grid testing*/
